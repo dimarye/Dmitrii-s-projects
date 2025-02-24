@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    margin: 0;
+}
+
+.frame {
+    border: 20px solid black;
+    width: 500px;
+    padding: 30px;
+    background: linear-gradient(45deg, #333, #000);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.canvas {
+    width: 100%;
+    height: 400px;
+    background: url('texture.png'), #4d0f00;
+    background-blend-mode: overlay;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.one, .two, .three {
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: breathe 5s infinite ease-in-out;
+}
+
+.one {
+    height: 120px;
+    background: linear-gradient(45deg, #efb762, #d89e50);
+    border-radius: 8px;
+    transform: rotate(-0.6deg);
+}
+
+.two {
+    height: 160px;
+    background: linear-gradient(45deg, #8f0401, #6f0301);
+    border-radius: 8px;
+    transform: rotate(0.4deg);
+}
+
+.three {
+    height: 100px;
+    background: linear-gradient(45deg, #b20403, #8f0302);
+    border-radius: 12px;
+    transform: rotate(-0.2deg);
+}
+
+@keyframes breathe {
+    0% { opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+.one:hover, .two:hover, .three:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.signature {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    margin-top: 10px;
+}

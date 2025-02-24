@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+    margin: 0;
+}
+
+.wheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #555;
+    border-radius: 50%;
+    height: 55vw;
+    width: 55vw;
+    max-width: 600px;
+    max-height: 600px;
+    background: radial-gradient(circle, #ccc, #888);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: wheel 10s linear infinite;
+}
+
+.wheel::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background: url('logo.jpeg') no-repeat center center;
+    background-size: contain;
+    border-radius: 25%;
+    z-index: 10;
+}
+
+.line {
+    background: linear-gradient(to right, #333, #999);
+    width: 50%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+}
+
+.line:nth-of-type(2) { transform: rotate(60deg); }
+.line:nth-of-type(3) { transform: rotate(120deg); }
+.line:nth-of-type(4) { transform: rotate(180deg); }
+.line:nth-of-type(5) { transform: rotate(240deg); }
+.line:nth-of-type(6) { transform: rotate(300deg); }
+
+.cabin {
+    background: linear-gradient(to top, #ff6347, #ff4500);
+    width: 18%;
+    height: 18%;
+    position: absolute;
+    border: 3px solid #444;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transform-origin: 50% 0%;
+    animation: cabins 10s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cabin::before {
+    content: "";
+    width: 60%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 10%;
+    border-radius: 5px;
+}
+
+.cabin:nth-of-type(1)::after { content: "👨‍👩‍👧‍👦"; }
+.cabin:nth-of-type(2)::after { content: "👩‍👦"; }
+.cabin:nth-of-type(3)::after { content: "👨‍👩‍👦"; }
+.cabin:nth-of-type(4)::after { content: "👩‍👩‍👦‍👦"; }
+.cabin:nth-of-type(5)::after { content: "👨‍👧"; }
+.cabin:nth-of-type(6)::after { content: "👨‍👨‍👦"; }
+
+.cabin::after {
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 10%;
+}
+
+.cabin:nth-of-type(1) { right: -8.5%; top: 50%; }
+.cabin:nth-of-type(2) { right: 17%; top: 93.5%; }
+.cabin:nth-of-type(3) { right: 67%; top: 93.5%; }
+.cabin:nth-of-type(4) { left: -8.5%; top: 50%; }
+.cabin:nth-of-type(5) { left: 17%; top: 7%; }
+.cabin:nth-of-type(6) { right: 17%; top: 7%; }
+
+@keyframes wheel {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes cabins {
+    0% { transform: rotate(0deg) scale(1); filter: brightness(1); }
+    50% { transform: rotate(-180deg) scale(1.1); filter: brightness(1.2); }
+    100% { transform: rotate(-360deg) scale(1); filter: brightness(1); }
+}

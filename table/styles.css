@@ -1,0 +1,128 @@
+/* 🎨 Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #356eaf;
+    --accent-color: #99c9ff;
+    --text-color: #0a0a23;
+    --border-color: #d0d0d5;
+    --highlight-color: #e3f2fd;
+}
+
+/* ✨ Base Styles */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+}
+
+/* 📌 Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Title */
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* 🔄 Year Selection */
+#years {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.year {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.year.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* 📊 Table Styles */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    background: white;
+}
+
+/* 🏷️ Table Header */
+thead th {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+/* 🔢 Table Data */
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 0.7rem;
+    text-align: right;
+}
+
+/* 🖍️ Description Text */
+th .description {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ✨ Highlights */
+td.highlight {
+    font-weight: bold;
+    background: var(--highlight-color);
+}
+
+/* 🔥 Total Row */
+tr.total {
+    font-weight: bold;
+    border-top: 2px solid var(--text-color);
+}
+
+/* 🟢 Hover Effects */
+tr:hover {
+    background: var(--table-stripe);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .year {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,80 @@
+/* Сброс отступов и настройка box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f6f7;
+    color: #333;
+}
+
+/* Оформление заголовка */
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    border-bottom: 6px solid #ff6f61;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Оформление галереи */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивное оформление для мобильных устройств */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+}
