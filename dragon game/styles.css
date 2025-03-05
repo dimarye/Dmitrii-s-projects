@@ -1,0 +1,93 @@
+body {
+    background-color: #0a0a23;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #0a0a23;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#images {
+    position: relative;
+    width: 500px; /* Фиксированная ширина */
+    height: 300px; /* Фиксированная высота */
+    margin: 10px auto;
+    border: 2px solid #0a0a23;
+    overflow: hidden; /* Скрываем всё, что выходит за границы */
+}
+
+#locationImage {
+    width: 100%; /* Локация занимает весь контейнер */
+    height: 100%;
+    object-fit: cover; /* Масштабируем изображение, чтобы оно заполнило контейнер */
+}
+
+#heroImage {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 80px; /* Фиксированный размер героя */
+    height: 80px;
+    border: 2px solid #0a0a23;
+    object-fit: cover; /* Масштабируем изображение */
+}
+
+#monsterImage {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 80px; /* Фиксированный размер монстра */
+    height: 80px;
+    border: 2px solid #0a0a23;
+    object-fit: cover; /* Масштабируем изображение */
+    display: none; /* По умолчанию скрыт */
+}
+
+#stats, #controls, #monsterStats {
+    border: 1px solid #0a0a23;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    color: #0a0a23;
+}
+
+#monsterStats {
+    display: none;
+    background-color: #c70d0d;
+    color: #ffffff;
+}
+
+.stat {
+    padding-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+    padding: 5px 10px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc66;
+    transform: scale(1.05);
+}
+
+#text {
+    background-color: #0a0a23;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
