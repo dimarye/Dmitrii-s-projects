@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #212529; /* Глубокий серый для текста */
+    --secondary-color: #495057; /* Средний серый для подзаголовков */
+    --background-color: #f8f9fa; /* Светло-серый для фона */
+    --accent-color: #0d6efd; /* Яркий синий для кнопок и ссылок */
+    --accent-hover-color: #0b5ed7; /* Темно-синий для hover-состояний */
+    --border-color: #dee2e6; /* Светлая рамка для полей ввода */
+    --shadow-color: rgba(0, 0, 0, 0.15); /* Легкая тень для глубины */
+    --font-family: 'Poppins', Arial, sans-serif; /* Стильный, современный шрифт */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+label, legend {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.input-container input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background: #ffffff;
+    box-shadow: inset 0 1px 3px var(--shadow-color);
+}
+
+button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover-color);
+    transform: scale(1.05);
+}
+
+.output {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #e9f7ff; /* Светлый голубой фон для выходных данных */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.surplus {
+    color: #dc3545; /* Красный для избытка */
+}
+
+.deficit {
+    color: #198754; /* Зеленый для дефицита */
+}
+
+/* Стили навигации, если она понадобится */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    color: var(--accent-hover-color);
+}
