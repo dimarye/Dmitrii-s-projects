@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<main>
+    <h1>Todo App</h1>
+    <div class="todo-app">
+        <div class="controls">
+            <button id="open-task-form-btn" class="btn large-btn">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+            <div class="sort-filter">
+                <select id="sort-by" class="btn">
+                    <option value="date-asc">Date (↑)</option>
+                    <option value="date-desc">Date (↓)</option>
+                    <option value="status">Status</option>
+                </select>
+                <select id="filter-by" class="btn">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Pending</option>
+                </select>
+            </div>
+        </div>
+
+        <form class="task-form hidden" id="task-form">
+            <div class="task-form-header">
+                <h2 id="form-title">Add New Task</h2>
+                <button id="close-task-form-btn" class="close-task-form-btn" type="button" aria-label="close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="task-form-body">
+                <label class="task-form-label" for="title-input">Title*</label>
+                <input required type="text" id="title-input" placeholder="Task title">
+                <label class="task-form-label" for="date-input">Due Date</label>
+                <input type="date" id="date-input">
+                <label class="task-form-label" for="category-input">Category</label>
+                <select id="category-input" class="btn">
+                    <option value="general">General</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                </select>
+                <label class="task-form-label" for="description-input">Description</label>
+                <textarea id="description-input" placeholder="Task details..."></textarea>
+            </div>
+            <div class="task-form-footer">
+                <button id="add-or-update-task-btn" class="btn large-btn" type="submit">
+                    <i class="fas fa-save"></i> Save Task
+                </button>
+            </div>
+        </form>
+
+        <dialog id="confirm-close-dialog">
+            <form method="dialog">
+                <p class="discard-message-text">Discard unsaved changes?</p>
+                <div class="confirm-close-dialog-btn-container">
+                    <button id="cancel-btn" class="btn"><i class="fas fa-times"></i> Cancel</button>
+                    <button id="discard-btn" class="btn discard-btn"><i class="fas fa-trash"></i> Discard</button>
+                </div>
+            </form>
+        </dialog>
+
+        <div id="tasks-container"></div>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
